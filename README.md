@@ -17,9 +17,9 @@ package main
 import "github.com/sergey-sotnikov/go-swagger-ui/swagger"
 
 func main() {
-    handler := swagger.Middleware(&swagger.Opts{SpecURL: "/swagger-spec/swagger.json"}, nil)
-	if err := http.ListenAndServe(":5300", handler); err != nil {
-		panic(err)
-	}
+  handler := swagger.Middleware(&swagger.Opts{SpecURL: "/swagger-spec/swagger.json"}, nil)
+  if err := http.ListenAndServe(":5300", handler); err != nil {
+    panic(err)
+  }
 }
 ```
